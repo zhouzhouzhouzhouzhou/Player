@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/controller_rl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/d85"
+    android:paddingRight="@dimen/d86"
+    android:paddingTop="@dimen/d50">
+
+    <TextView
+        android:id="@+id/channel_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="熊出没之探险记"
+        android:textColor="@color/color_write"
+        android:textSize="@dimen/d48"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/d204"
+        android:drawableLeft="@mipmap/playing_back"
+        android:text="返回键退出回看"
+        android:textColor="@color/color_write"
+        android:textSize="@dimen/d30"/>
+
+    <TextClock
+        android:id="@+id/current_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:format24Hour="HH:mm:ss"
+        android:textColor="@color/color_write"
+        tools:targetApi="jelly_bean_mr1"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/video_loading"
+        style="@style/SpinKitView.Circle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        app:SpinKit_Color="#9e9e9e"/>
+
+    <ImageView
+        android:id="@+id/playing_ff_iv"
+        android:layout_width="@dimen/d150"
+        android:layout_height="@dimen/d150"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/playing_ff"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/playing_rew_iv"
+        android:layout_width="@dimen/d150"
+        android:layout_height="@dimen/d150"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/playing_rew"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/current_play_times_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/d50"
+        android:text="00:00:00"
+        android:textColor="@color/color_write"
+        android:textSize="@dimen/d30"/>
+
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="@dimen/d1464"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/d67"
+        android:layout_marginLeft="@dimen/d8"
+        android:background="@null"
+        android:focusable="true"
+        android:maxHeight="@dimen/d2"
+        android:minHeight="@dimen/d2"
+        android:progressDrawable="@drawable/play_progress_style"
+        android:splitTrack="false"
+        android:thumb="@null"/>
+
+    <TextView
+        android:id="@+id/videoTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/d50"
+        android:text="00:00:00"
+        android:textColor="@color/color_write"
+        android:textSize="@dimen/d30"/>
+
+    <ImageView
+        android:id="@+id/pause_iv"
+        android:layout_width="@dimen/d100"
+        android:layout_height="@dimen/d100"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/d50"
+        android:focusable="true"
+        android:src="@mipmap/playing_pause"
+        android:visibility="gone"/>
+
+</RelativeLayout>
